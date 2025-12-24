@@ -1,0 +1,99 @@
+/* FontCard & Previews */
+.code-preview,
+.design-preview {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.code-content {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border: 1px solid var(--color-border);
+    flex: 1;
+    min-height: 0;
+    /* Extra Ligature Support for Code */
+    font-variant-ligatures: discretionary-ligatures;
+    font-feature-settings: "liga" on, "calt" on, "dlig" on;
+}
+
+/* Design Preview */
+.design-preview {
+    overflow-y: auto;
+    padding-right: var(--space-2);
+}
+
+.design-preview::-webkit-scrollbar {
+    width: 6px;
+}
+
+.design-preview::-webkit-scrollbar-thumb {
+    background: var(--color-surface-hover);
+    border-radius: var(--radius-full);
+}
+
+.design-preview .preview-section {
+    margin-bottom: var(--space-8);
+}
+
+.ui-elements {
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.preview-btn {
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    transition: all var(--transition-fast);
+}
+
+.preview-btn:active {
+    transform: scale(0.95);
+}
+
+.preview-btn.primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.preview-btn.secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-border);
+}
+
+.preview-input {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--color-surface-hover);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    color: var(--color-text);
+    font-family: inherit;
+    transition: border-color var(--transition-fast);
+}
+
+.preview-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.tags {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: var(--color-surface-hover);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
